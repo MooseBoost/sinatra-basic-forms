@@ -44,9 +44,17 @@ Create an edit view template in views/songs and build a form with named controls
 
 Create an 'update' route in app.rb. The is is the route where you will post the data from the song edit form. Inside the controller block, use the params hash to update and save the changes to the song.
 
+*Hint:* The the correct route method for update is `patch`. Create your `patch` route in the app.rb file.
+
 ### Add the route action to your form
 
 Make sure that the 'action' attribute of your form points to the correct route, and that the method is correct.
+
+*Hint:* Your form should have a hidden field, that overwrites the post method of your form.
+
+```
+<input type="hidden" name="_method" value="PATCH"/>
+```
 
 ### Add the edit link
 
