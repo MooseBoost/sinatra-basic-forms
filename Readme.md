@@ -40,6 +40,22 @@ Create an 'edit' route in app.rb and pass it a song id. This route is going to r
 
 Create an edit view template in views/songs and build a form with named controls. The purpose of this form is to edit/update existing songs. These fields should have the songs current attributes set as their value so that they can be properly updated.
 
+*Hint:* If you want to use a table in your view, remember to wrap the whole table in your form. 
+
+```erb
+<form action="/songs/<%=@song.id%>" method="POST">
+  <input type='hidden' name="_method" value="PATCH">
+  <table class='table table-striped'>
+    <tr>
+      <td>Artist</td>
+    </tr>
+        <tr>
+          <td>Album</td>
+        </tr>
+   </table>
+</form>
+```
+
 ### Create the update route
 
 Create an 'update' route in app.rb. The is is the route where you will post the data from the song edit form. Inside the controller block, use the params hash to update and save the changes to the song.
