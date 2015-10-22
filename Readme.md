@@ -68,7 +68,7 @@ Make sure that the 'action' attribute of your form points to the correct route, 
 
 *Hint:* Your form should have a hidden field, that overwrites the post method of your form.
 
-```
+```erb
 <input type="hidden" name="_method" value="PATCH"/>
 ```
 
