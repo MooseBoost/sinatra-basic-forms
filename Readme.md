@@ -42,6 +42,10 @@ Create an edit view template in views/songs and build a form with named controls
 
 *Hint:* If you want to use a table in your view, remember to wrap the whole table in your form. 
 
+The convention is to have everything in your view wrapped in a form and instead of using a table we would use css to format our view.
+
+But the purpose of this lab is to create a form and not make it look pretty.
+
 ```erb
 <form action="/songs/<%=@song.id%>" method="POST">
   <input type='hidden' name="_method" value="PATCH">
@@ -60,13 +64,13 @@ Create an edit view template in views/songs and build a form with named controls
 
 Create an 'update' route in app.rb. The is is the route where you will post the data from the song edit form. Inside the controller block, use the params hash to update and save the changes to the song.
 
-*Hint:* The the correct route method for update is `patch`. Create your `patch` route in the app.rb file.
+*Hint:* The the correct route method for update is `PATCH`. Create your `PATCH` route in the app.rb file.
 
 ### Add the route action to your form
 
 Make sure that the 'action' attribute of your form points to the correct route, and that the method is correct.
 
-*Hint:* Your form should have a hidden field, that overwrites the post method of your form.
+*Hint:* Your form should have a hidden field, that overwrites the post method of your form. We use this hidden field, because forms are submitted as POST requests by default.
 
 ```erb
 <input type="hidden" name="_method" value="PATCH"/>
