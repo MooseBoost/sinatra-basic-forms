@@ -53,4 +53,4 @@ Make sure that the 'action' attribute of your form points to the correct route, 
 Add a link on each song show page that directs users to the edit view
 and fix the songs!
 
-<a href='https://learn.co/lessons/sinatra-basic-forms' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-basic-forms' title='Basic Forms!'>Basic Forms!</a> on Learn.co and start learning to code for free.</p>
